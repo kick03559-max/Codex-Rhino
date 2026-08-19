@@ -1,0 +1,22 @@
+# Local credentials and private configuration
+config.toml
+*.local.toml
+.env
+**/.env
+*.key
+*.pem
+
+# Python environments and caches
+tools/rhino_mcp_env/
+rhino_mcp_env/
+**/venv/
+**/.venv/
+**/__pycache__/
+*.pyc
+
+# Local editor/system files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
