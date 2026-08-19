@@ -1,6 +1,6 @@
 # Codex&Rhino 项目交接状态
 
-> 更新时间：2026-08-18
+> 更新时间：2026-08-19
 > 
 > 本地资料包：`D:\20260525\2026项目汇总\AIGC\CODEX\Codex&Rhino`
 
@@ -49,10 +49,12 @@
 
 ## GitHub 上传状态
 
-- 本机此前检测到工作区根目录不是 Git 仓库。
-- 本资料包尚未完成 Git 初始化、账号认证和远程推送。
-- 本机当前未检测到 `gh` 命令，因此不能按 GitHub 发布流程执行 `gh auth status`、创建仓库和推送。
-- 下一步需要安装 GitHub CLI，或由用户选择使用已登录的 GitHub 网页方式完成上传；登录时不应把密钥交给 Codex。
+- 已在 `Codex&Rhino` 目录初始化 Git 仓库，分支为 `main`。
+- 已完成敏感信息扫描，未发现 API key、私钥或实际 `.env` 配置；个人配置和虚拟环境已由 `.gitignore` 排除。
+- GitHub 私有仓库：<https://github.com/kick03559-max/Codex-Rhino>
+- 已通过 Git Credential Manager 完成浏览器授权并推送到 `origin/main`。
+- 首次提交：`4caa7053ae735ed33ce0857e40b1d358a99e2c73`（`docs: add Codex and Rhino workflow package`）。
+- 当前工作区已与 `origin/main` 同步；本机未安装 `gh` CLI，但不影响本次 Git 推送。
 
 ## 已知问题
 
@@ -64,9 +66,7 @@
 
 ## 下一步顺序
 
-1. 安装 GitHub CLI `gh`，执行 `gh auth login` 完成浏览器登录。
-2. 在本目录执行 Git 初始化和敏感信息扫描。
-3. 创建私有仓库 `Codex-Rhino`，提交并推送资料包。
-4. 记录远程仓库地址和首个提交信息。
-5. 后续所有相关文档、模型版本和材质资产继续放入 `Codex&Rhino` 目录。
-
+1. 在 GitHub 仓库首页确认 README、教程、源码和项目资产均可正常浏览或下载。
+2. 后续所有相关文档、模型版本和材质资产继续放入 `Codex&Rhino` 目录。
+3. 每次修改前后执行敏感信息检查，再提交并推送到 `main`；不要提交真实密钥、个人 `config.toml` 或虚拟环境。
+4. 如需多人协作，再另行建立功能分支和 Pull Request 流程。
